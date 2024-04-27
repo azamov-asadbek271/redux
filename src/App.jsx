@@ -15,12 +15,15 @@ function App() {
 
 const hanldeSubmit = (e) => {
     e.preventDefault()
-  dispatch(
-    addTodos({
-      id: uuidv4(),
-      text: todo,
-    })
-  );
+    if(todo !== "") {
+       dispatch(
+         addTodos({
+           id: uuidv4(),
+           text: todo,
+         })
+       );
+    }
+ 
     setTodo("")
 }
 
@@ -40,7 +43,7 @@ const hanldeSubmit = (e) => {
       <div className='list'>{todos && todos.map((todo) => {
         return (
           <div className='item' key={todo.id}>
-             <input type="checkbox" />
+             <input type="checkbox"  />
              <h4 className='todo-text'>{todo.text}</h4>
              <button 
              className='delete-btn'
