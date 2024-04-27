@@ -45,8 +45,7 @@
     cursor: pointer;
     border-radius: 40px;
 } 
-.list {
-}
+
 .item {
   display: flex;
   justify-content: space-between;
